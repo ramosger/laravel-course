@@ -36,7 +36,10 @@
                 <a href="/jobs" class="text-sm/6 font-semibold text-white">Jobs</a>
             </el-popover-group>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+
+                <x-nav-link href="/login" :active="request()->is('login')">Log In</x-nav-link>
+                <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
+
             </div>
         </nav>
 
@@ -68,9 +71,13 @@
                                         class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Jobs</a>
                                 </div>
                                 <div class="py-6">
-                                    <a href="#"
-                                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log
-                                        in</a>
+                                    <a href="/login" class="text-sm/6 font-semibold text-white"
+                                        active="request()->is('login')">Log in <span
+                                            aria-hidden="true">&rarr;</span></a>
+
+                                    <a href="/register" class="text-sm/6 font-semibold text-white"
+                                        active="request()->is('register')">Register<span
+                                            aria-hidden="true">&rarr;</span></a>
                                 </div>
                             </div>
                         </div>
